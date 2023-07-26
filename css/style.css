@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Serif:wght@700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#main-foto {
+  background-image: url("../images/Captura.PNG");
+  width: 100%;
+  overflow: hidden;
+}
+#main-foto h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin: 15px;
+  color: wheat;
+}
+#main-foto p {
+  font-family: "PT Serif", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: wheat;
+  padding-bottom: 10px;
+}
+
+.div-filtrado {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.div-filtrado .filtrado {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  border-radius: 5px;
+  border: 3px solid blueviolet;
+  background-color: wheat;
+  width: 15%;
+  align-items: center;
+}
+.div-filtrado .filtrado p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.div-filtrado .filtrado .active-item {
+  background-color: rgb(134, 92, 13);
+  color: white;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards .individual-card {
+  margin: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards .individual-card img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.card-titulo {
+  font-size: 25px;
+  text-align: center;
+}
+
+.card-texto {
+  font-size: 15px;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */
