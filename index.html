@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,135 +22,17 @@
     </header>
     <main>
         <div class="div-filtrado">
-            <div class="filtrado todo"> <p>Todo</p> </div>
-            <div class="filtrado entrada-click"> <p>Entradas</p> </div>
-            <div class="filtrado plato-fondo-click"> <p>Platos de Fondo</p> </div>
-            <div class="filtrado postre-click"> <p>Postres</p> </div>
-            <div class="filtrado bebida-click"> <p>Bebidas</p> </div>
+            <button class="filtrado todo" type="button" data-id="todo"> <p>Todo</p> </button>
+            <button class="filtrado entrada-filter" type="button" data-id="entrada"> <p>Entrada</p> </button>
+            <button class="filtrado plato-filter" type="button" data-id="plato-fondo"> <p>Plato de Fondo</p> </button>
+            <button class="filtrado postre-filter" type="button" data-id="postre"> <p>Postre</p> </button>
+            <button class="filtrado bebidas-filter" type="button" data-id="bebida"> <p>Bebidas</p> </button>
+
+
         </div>
 
         <section class="cards">
-
-<!--             <div class="card individual-card entrada" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes.</p>
-                  <p class="card-texto"> Precio <span>S/. 6.00</span> </p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-    
-            <div class="card individual-card entrada" style="width: 18rem;">
-                <img src="images/sopa_a_la_minuta.PNG" class="card-img-top" alt="sopa a la minuta">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Sopa a la minuta</h5>
-                  <p class="card-texto"> Una sopa reconfortante a base de carne de res y tomate con papa y fideo cabello de ángel.</p>
-                  <p class="card-texto"> Precio <span>S/. 5.00</span> </p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card plato-fondo" style="width: 18rem;">
-                <img src="images/lomo_saltado.jpg" class="card-img-top" alt="lomo saltado">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Lomo saltado</h5>
-                  <p class="card-texto"> Jugosos trozos de lomo al wok, servidos con cebolla, tomate, papas fritas y arroz blanco.</p>
-                  <p class="card-texto"> Precio <span>S/. 18.00</span> </p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card plato-fondo" style="width: 18rem;">
-                <img src="images/tallarin_saltado.jpg" class="card-img-top" alt="tallarín saltado">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Tallarín Saltado</h5>
-                  <p class="card-texto"> Plato típico de la gastronomía peruana, propio de la cocina chifa con pollo, ají amarillo, cebolla china y tomates salteados al wok.</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div>
-
-            <div class="card individual-card" style="width: 18rem;">
-                <img src="images/menestron.jpg" class="card-img-top" alt="menestron">
-                <div class="card-body">
-                  <h5 class="card-title card-titulo">Menestrón</h5>
-                  <p class="card-texto"> Una sopa de menestras acompañadas de una buena porción de carne de res, a la que se incorpora la misma salsa de los también famosos tallarines verdes</p>
-                  <a href="#" class="btn btn-primary boton-anadir">Pedir</a>
-                </div>
-            </div> -->
-    
+            
           </section>
     
 
