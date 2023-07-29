@@ -82,10 +82,12 @@ main{
         border-radius: 15px;
         width: 100%;
     }
+    .boton-agregar{
+    background-color: #c59d5f;
+    border: #c59d5f;
+    }
 }
 }
-
-
 
 .card-titulo{
     font-size: 25px;
@@ -95,5 +97,11 @@ main{
     font-size: 15px;
     text-align: justify;
 }
+
+.img-pedido{
+    width: 10vw;
+    margin: 10px;
+}
+
 
 
