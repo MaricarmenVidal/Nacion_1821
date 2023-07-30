@@ -86,6 +86,9 @@ function agregarProductos(evt){
 
 function renderizarCarrito() {
     cards.textContent = '';
+    while(DOMpedido.firstChild) {
+        DOMpedido.removeChild(DOMpedido.firstChild)
+    }
     const carritoSinDuplicados = [...new Set(platosPedidos)];
     carritoSinDuplicados.forEach((item) => {
         const miItem = platos.filter((itemBaseDatos) => {
@@ -95,7 +98,7 @@ function renderizarCarrito() {
             return itemId === item ? total += 1 : total;
         }, 0);
         const miNodo = document.createElement('li');
-        miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+        miNodo.classList.add('list-group-item', 'text-right', 'mx-2',`${miItem[0].id}`);
         miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - S/. ${miItem[0].precio}`;
         const miBoton = document.createElement('button');
         miBoton.classList.add('btn', 'btn-danger', 'mx-5', `${miItem[0].id}`);
@@ -110,9 +113,10 @@ function renderizarCarrito() {
 
 
 function borrarItemPedido(evt) {
-
     evt.preventDefault();
+    displayMenuItems(platos)
     console.log(evt.target.parentElement)
+
     if(evt.target.classList.contains('btn-danger')){
 
         const id = evt.target.dataset.item
@@ -120,7 +124,7 @@ function borrarItemPedido(evt) {
         platosPedidos = platosPedidos.filter((pedidoId) => {
             return pedidoId !== id;
         });
-    displayMenuItems(platos)
+    
 
     renderizarCarrito();
     calcularTotal();
