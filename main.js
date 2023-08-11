@@ -28,8 +28,13 @@ const mazamorra_morada =new Plato(5, "Mazamorra Morada", "Postre típico de nues
 const arroz_con_leche =new Plato(6, "Arroz con Leche", "Postre típico de nuestra gastronomía elaborado a base de arroz cocido en leche con azúcar y canela, servido con una pizca de canela en polvo y leche condesada", 3, "postre", "images/arroz_con_leche.jpg")
 const chicha_morada=new Plato(7, "Chicha Morada", "Concentrado de maíz morado, piña, manzana, membrillo, clavo de olor, canela y aceite esencial de limón", 7, "bebida", "images/chicha-morada.jpg")
 const limonada_tropical=new Plato (8, "Limonada Tropical", "Fresa, piña golden y zumo de limón", 6, "bebida", "images/limonada-tropical.jpg")
+const causa = new Plato (9, "Causa", "Plato es elaborado en base a papa amarilla, limón, ají, lechuga, choclo, queso fresco, huevo cocido, palta y aceitunas negras.", 4, "entrada", "images/causa_limena.jpg")
+const tallarines_verdes= new Plato (10, "Tallarines verdes", "Un plato de pasta que se baña de una rica salsa emulando la famosa salsa pesto italiana, y que se adorna con un delicioso bistec", 14, "plato-fondo", "images/tallarin-verde.jpg" )
+const tequeños= new Plato(11, "Tequeños", "Deliciosos aperitivos elaborados con masa de wantan, relleno de queso fresco y se suelen acompañar con una rica salsa de palta", 4, "entrada", "images/tequenos-peruanos-con-guacamole.jpg")
+const budin = new Plato(12, "Budín", "Tipo de alimento de la cocina inglesa y estadounidense, es una preparación cocida al horno o al baño María, y dulce", 3, "postre", "images/budin.jpg")
+const cafe_americano=new Plato (13, "Café Americano", "Es la bebida caliente ideal para las personas que quieren tomar un delicioso espresso, pero que no toleran el sabor tan intenso del espresso.", 5,"bebida", "images/cafe-americano.jpg")
 
-const platos = [menestron, sopa_minuta, lomo_saltado, tallarin_saltado, mazamorra_morada, arroz_con_leche, chicha_morada, limonada_tropical]
+const platos = [menestron, sopa_minuta, lomo_saltado, tallarin_saltado, mazamorra_morada, arroz_con_leche, chicha_morada, limonada_tropical, causa, tallarines_verdes, tequeños, budin, cafe_americano]
 
 
 
@@ -78,19 +83,19 @@ function agregarProductos(evt){
     if(evt.target.classList.contains('boton-agregar')){
         platosPedidos.push(evt.target.getAttribute('data-id'))
         calcularTotal();
-        renderizarCarrito();
+        leerProductos();
         guardarPedidoEnLocalStorage();
         displayMenuItems(platos)
+
     }
 }
 
-function renderizarCarrito() {
-    cards.textContent = '';
+function leerProductos() {
     while(DOMpedido.firstChild) {
         DOMpedido.removeChild(DOMpedido.firstChild)
     }
-    const carritoSinDuplicados = [...new Set(platosPedidos)];
-    carritoSinDuplicados.forEach((item) => {
+    const elementosSinDuplicados = [...new Set(platosPedidos)];
+    elementosSinDuplicados.forEach((item) => {
         const miItem = platos.filter((itemBaseDatos) => {
             return itemBaseDatos.id === parseInt(item);
         });
@@ -108,6 +113,7 @@ function renderizarCarrito() {
         miBoton.addEventListener('click', borrarItemPedido);
         miNodo.appendChild(miBoton);
         DOMpedido.appendChild(miNodo);
+
     });
 }
 
@@ -115,7 +121,6 @@ function renderizarCarrito() {
 function borrarItemPedido(evt) {
     evt.preventDefault();
     displayMenuItems(platos)
-    console.log(evt.target.parentElement)
 
     if(evt.target.classList.contains('btn-danger')){
 
@@ -126,7 +131,7 @@ function borrarItemPedido(evt) {
         });
     
 
-    renderizarCarrito();
+    leerProductos();
     calcularTotal();
     guardarPedidoEnLocalStorage();
     }
@@ -147,7 +152,7 @@ function calcularTotal() {
 
 function vaciarCarrito() {
     platosPedidos = [];
-    renderizarCarrito();
+    leerProductos();
     calcularTotal();
     localStorage.clear();
     displayMenuItems(platos)
@@ -172,5 +177,24 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 // Inicio
 cargarPedidoDeLocalStorage();
 calcularTotal();
-renderizarCarrito();
+leerProductos();
 
+
+const boton_comprar=document.querySelector("#boton-comprar")
+
+boton_comprar.addEventListener('click', ()=>{
+    Swal.fire({
+        title: 'Tu pedido fue realizado con éxito',
+        text: 'Te invitamos a elegir la cortesía de hoy',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+    })
+    vaciarCarrito()
+    apareceBtnCortesia()
+})
+
+function apareceBtnCortesia(){
+    document.querySelector(".botones").innerHTML=`
+    <button id="boton-cortesia"         onclick="location.href='cortesia.html'" class="btn btn-danger">Cortesía</button>
+    `
+}

@@ -10,13 +10,14 @@
 </head>
 <body>
     <header>
-        <div id="main-foto">
-            <h1>
+        <div id="header">
+                <h1>
                 NACIÓN 1821
-            </h1>
-            <p>
-                ¡Tan Criollos como tú!
-            </p>
+                </h1>
+                <p>
+                    ¡Tan Criollos como tú!
+                </p>
+
         </div>
     </header>
     <main>
@@ -47,18 +48,19 @@
     
     
     
-                            <!-- Pedido -->
+
                             <aside class="col-sm-4">
-                                <h2>Pedido</h2>
-                                <!-- Elementos del pedido -->
+
                                 <ul id="lista-pedido" class="list-group"></ul>
                                 <hr>
-                                <!-- Precio total -->
+
                                 <p class="text-right">Total: S/. <span id="total"></span></p>
-                                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                                <div class="botones">
+                                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                                    <button id="boton-comprar" class="btn btn-danger">Pedir</button>                       </div>
+
                             </aside>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             
@@ -66,7 +68,8 @@
                 style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #c59d5f;"></path>
-            </svg></div>
+            </svg>
+            </div>
         </section>
 
 
@@ -74,5 +77,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

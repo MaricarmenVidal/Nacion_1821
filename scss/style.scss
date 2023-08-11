@@ -3,26 +3,68 @@
     padding:0px;
     margin:0px
 }
-#main-foto{
+
+header{
     background-image:url("../images/Captura.PNG");
     width: 100%;
-    overflow: hidden;
+    overflow: hidden;    
     h1{
         font-family: "Abril Fatface", cursive;
         font-size: 3rem;
         text-align: center;
         margin: 15px;
         color: wheat;
-    }
-            
-    p{
-        font-family: 'PT Serif', serif;
-        font-size: 1.5rem;
-        text-align: center;
-        color: wheat;
-        padding-bottom: 10px;
-    }
+        }
+                
+        p{
+            font-family: 'PT Serif', serif;
+            font-size: 1.5rem;
+            text-align: center;
+            color: wheat;
+            padding-bottom: 10px;
+        }
+
 }
+#main-foto{
+    background-image:url("../images/Captura.PNG");
+    width: 100%;
+    overflow: hidden;    
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    grid-template-rows: auto 10vh auto;
+
+    .principal{
+        grid-column: 1/6;
+        grid-row: 1/4;
+
+        h1{
+        font-family: "Abril Fatface", cursive;
+        font-size: 3rem;
+        text-align: center;
+        margin: 15px;
+        color: wheat;
+        }
+                
+        p{
+            font-family: 'PT Serif', serif;
+            font-size: 1.5rem;
+            text-align: center;
+            color: wheat;
+            padding-bottom: 10px;
+        }
+    }
+    #btn-pedido{
+        grid-column: 6/7;
+        grid-row: 2/3 ;
+        background-image:url("../images/Captura.PNG");
+        color: white;
+        font-size: 20px;
+    }
+
+}
+
+
 main{
     background-color: #F1F5F8;
     line-height: 1.5;
@@ -57,6 +99,8 @@ main{
         p{
             font-size: 1.5rem;
             text-align: center;
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
     }
     .filtrado:hover{
@@ -104,7 +148,11 @@ main{
 }
 
 
-#boton-vaciar{
+.contenedor{
+    margin: 20px;
+}
+
+#boton-vaciar, #boton-comprar, #boton-cortesia, #btn-elegir-cortesia, #boton-obtener {
     position:unset;
     padding: 1.5em 3.1em;
     border: none;
@@ -117,6 +165,20 @@ main{
     box-shadow: 2px 2px 25px -7px #4c4c4c;
     cursor: pointer;
 }
-#boton-vaciar:active {
+#boton-vaciar:active, #boton-comprar:active, #boton-cortesia:active, #btn-elegir-cortesia:active, #boton-obtener:active {
     transform: scale(0.98);
+}
+
+.div-btn-cortesia{
+    padding: 40px;
+    width: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3{
+        padding: 20px;
+    }
+
 }

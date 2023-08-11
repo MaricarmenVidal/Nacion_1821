@@ -1,0 +1,92 @@
+[
+    {
+        "id":1,
+        "name":"Margarita",
+        "description":"Tequila, triple seco y jugo de lima o limón.",
+        "image":"https://cocina-casera.com/wp-content/uploads/2017/11/C%C3%B3ctel-Margarita.jpg"
+    },
+    {
+        "id":2,
+        "name":"Mojito",
+        "description":"Ron, azúcar, menta, lima, agua con gas o gaseosa y hielo.",
+        "image":"https://cocteles.club/wp-content/uploads/Coctel-mojito-de-pepino-saludable.jpg"
+    },
+    {
+        "id":3,
+        "name":"Gintonic",
+        "description":"Ginebra y tónica.",
+        "image":"https://www.gourmet.cl/wp-content/uploads/2019/02/Gin-tonic-web-553x458.jpg"
+    },
+    {
+        "id":4,
+        "name":"Caipirinha",
+        "description":"Cachaza, lima o limón, azúcar y hielo.",
+        "image":"https://www.finedininglovers.com/es/sites/g/files/xknfdk1706/files/styles/recipes_1200_800_fallback/public/2023-03/caipirinha%C2%A9iStock.jpg?itok=cOuYuS1Z"
+    },
+    {
+        "id":5,
+        "name":"Manhattan",
+        "description":"Whisky y vermut rojo.",
+        "image":"https://www.foodandwine.com/thmb/cOQktLcqXd_pgef_tcS8jkNjV1E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Manhattan-Cocktail-FT-BLOG0522-dee9bf6e992f425eb496657aa2f14d47.jpg"
+    },
+    {
+        "id":6,
+        "name":"Piña colada",
+        "description": "Piña, crema de coco y ron.",
+        "image":"https://lomaculinaria.com/wp-content/uploads/2022/07/Pin%CC%83a-Colada-Loma-Culinaria-1200x800-1.jpg"
+    },
+    {
+        "id":7,
+        "name":"Daiquiri",
+        "description":"Ron blanco y zumo de limón o lima.",
+        "image":"https://recetasdecocina.elmundo.es/wp-content/uploads/2022/05/daiquiri.jpg"
+    },
+    {
+        "id":8,
+        "name":"Cosmopolitan",
+        "description":"Vodka, triple seco, zumo de lima y zumo de arándanos.",
+        "image":"https://www.comedera.com/wp-content/uploads/2022/04/cosmopolitan.jpg"
+    },
+    {
+        "id":9,
+        "name":"Martini",
+        "description":"Ginebra y vermut seco.",
+        "image":"https://www.comedera.com/wp-content/uploads/2022/05/martini.jpg"
+    },
+    {
+        "id":10,
+        "name":"Long Island",
+        "description":"Vodka, tequila, ron blanco, triple seco, ginebra, zumo de limón, azúcar y cola.",
+        "image":"https://bebidasexquisitas.com/wp-content/uploads/2021/05/Long-Island-coctel2.png"
+    },
+    {
+        "id":11,
+        "name":"Bloody Mary",
+        "description":"Vodka, zumo de tomate, zumo de limón, tabasco, salsa Worcestershire, sal, pimienta y hielo.",
+        "image":"https://cocteles.club/wp-content/uploads/Coctel-Bloody-Mary.jpg"
+    },
+    {
+        "id":12,
+        "name":"Sex on the beach",
+        "description":"Vodka, licor de melocotón, zumo de naranza y zumo de arándanos.",
+        "image":"https://cocteles.club/wp-content/uploads/como-hacer-un-coctel-sex-on-the-beach.jpg"
+    },
+    {
+        "id":13,
+        "name":"Mai Tai",
+        "description":"Ron añejo, ron blanco, triple seco, zumo de lima, amaretto, azúcar y hielo.",
+        "image":"https://elcoctelero.com/wp-content/uploads/2020/09/cocktail-mai-tai.jpg"
+    },
+    {
+        "id":14,
+        "name":"Negroni",
+        "description":"Vermut rojo, Campari y vermut.",
+        "image":"https://saboryestilo.com.mx/wp-content/uploads/2022/06/Coctel-Negroni.jpg"
+    },
+    {
+        "id":15,
+        "name":"Rusty Nail",
+        "description":"Whisky escocés y licor drambuie.",
+        "image":"https://www.bebermagazine.com/wp-content/uploads/2021/01/boozy-refreshing-rusty-nail-cocktail-XQ4CTPP-scaled.jpg"
+    }
+]
